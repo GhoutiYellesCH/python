@@ -1,0 +1,44 @@
+ 6 4 0 0 1000000 1000000
+ 
+ cant 3 
+ 
+ 3 2 -1 0 1 0 
+ 
+ 18 
+ 
+  2 4 0 0 0 1
+  
+  20 
+  
+  0 2 0 1 0 0
+  
+  8
+  
+  ❯ python3 tp3.py
+Enter the coefficients of the objective function (c1, c2, ..., cn): 6 4 0 0 1000000 1000000
+Enter the number of constraints: 3
+Enter coefficients for constraint 1 (a1, a2, ..., an): 3 2 -1 0 1 0
+Enter the right-hand side value for constraint 1: 18
+Enter coefficients for constraint 2 (a1, a2, ..., an): 2 4 0 0 0 1
+Enter the right-hand side value for constraint 2: 20
+Enter coefficients for constraint 3 (a1, a2, ..., an):  0 2 0 1 0 0
+Enter the right-hand side value for constraint 3: 8
+
+Current Tableau:
+      | x0 | x1 | x2 | x3 | x4 | x5 | x6 | x7 | x8 | RHS
+------------------------------------------------
+Row 0:     0.00 |     6.00 |     4.00 |     0.00 |     0.00 | 1000000.00 | 1000000.00 |     0.00 |     0.00 |     0.00
+Row 1:     0.00 |     3.00 |     2.00 |    -1.00 |     0.00 |     1.00 |     0.00 |     1.00 |     0.00 |    18.00
+Row 2:     1.00 |     2.00 |     4.00 |     0.00 |     0.00 |     0.00 |     1.00 |     0.00 |     1.00 |    20.00
+Row 3:     2.00 |     0.00 |     2.00 |     0.00 |     1.00 |     0.00 |     0.00 |     0.00 |     0.00 |     8.00
+
+
+
+Final Solution:
+x1 = 18.00
+x2 = 20.00
+x3 = 8.00
+x4 = 0.00
+x5 = 0.00
+x6 = 0.00
+Optimal solution found with objective value: 0.00

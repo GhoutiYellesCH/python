@@ -1,0 +1,62 @@
+❯ python exo1.py
+Traceback (most recent call last):
+  File "/home/h7ck3r/Notes/code/python/TP_IA/tp4/tp4/exo1.py", line 4, in <module>
+    model = cp_model.CpModel()
+            ^^^^^^^^
+NameError: name 'cp_model' is not defined
+❯ python
+Python 3.12.7 (main, Oct  1 2024, 11:15:50) [GCC 14.2.1 20240910] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from ortools.sat.python import cp_model
+>>> model = cp_model.CpModel()
+>>> x = model.NewIVar(0,5,"x")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'CpModel' object has no attribute 'NewIVar'. Did you mean: 'NewIntVar'?
+>>> x = model.NewIntVar(0,5,"x")
+>>> x = model.NewIntVar(0,5,"x")
+>>> y = model.NewIntVarFromDomain(cp_model.Domain.FromValues([2,3,8]),"y")
+>>> model.Add(x + y < 5)
+<ortools.sat.python.cp_model.Constraint object at 0x7e8176ff8d10>
+>>> model.add(x != y)
+<ortools.sat.python.cp_model.Constraint object at 0x7e8176ff8fe0>
+>>> solver = cp_CpSolver()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cp_CpSolver' is not defined
+>>> status = solver.Solve(model)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'solver' is not defined
+>>> solver = cp_model.CpSolver()
+>>> status = solver.Solve(model)
+>>> if status == cp_model.OPTIMAL or status == cp_model.FEASIBLE:
+... print("x = %i" % solver.Value(x))
+  File "<stdin>", line 2
+    print("x = %i" % solver.Value(x))
+    ^
+IndentationError: expected an indented block after 'if' statement on line 1
+>>> if status == cp_model.OPTIMAL or status == cp_model.FEASIBLE:
+...         print("x = %i" % solver.Value(x))
+...     print("y = %i" % solver.Value(y))
+  File "<stdin>", line 3
+    print("y = %i" % solver.Value(y))
+                                     ^
+IndentationError: unindent does not match any outer indentation level
+>>> else:
+  File "<stdin>", line 1
+    else:
+    ^^^^
+SyntaxError: invalid syntax
+>>> if status == cp_model.OPTIMAL or status == cp_model.FEASIBLE:
+...     print("x = %i" % solver.Value(x))
+...     print("y = %i" % solver.Value(y))
+... else :
+...     print("No solution found")
+...
+x = 0
+y = 2
+>>>
+
+░▒▓    ~/Notes/code/python/TP_IA/tp4/tp4    master !880 ?15                              INT ✘  9m 47s   tp4   08:53:14 AM  ▓▒░
+❯

@@ -1,0 +1,18 @@
+hashcat (v6.2.6) starting
+
+clGetPlatformIDs(): CL_PLATFORM_NOT_FOUND_KHR
+
+ATTENTION! No OpenCL, HIP or CUDA compatible platform found.
+
+You are probably missing the OpenCL, CUDA or HIP runtime installation.
+
+* AMD GPUs on Linux require this driver:
+  "AMDGPU" (21.50 or later) and "ROCm" (5.0 or later)
+* Intel CPUs require this runtime:
+  "OpenCL Runtime for Intel Core and Intel Xeon Processors" (16.1.1 or later)
+* NVIDIA GPUs require this runtime and/or driver (both):
+  "NVIDIA Driver" (440.64 or later)
+  "CUDA Toolkit" (9.0 or later)
+
+Started: Tue Oct 22 10:52:19 2024
+Stopped: Tue Oct 22 10:52:19 202
